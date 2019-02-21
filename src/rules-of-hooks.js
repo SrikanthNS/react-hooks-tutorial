@@ -26,15 +26,28 @@ function TopLevel({ fail }) {
   return <div><p>TopLevel Failed: {JSON.stringify(state)}</p></div>;
 }
 
+class NoClasses extends React.Component {
+  render() {
+    const [count, setCount] = useState(3);
+    return (
+      <div>
+        Current count: {count}<br />
+        <button onClick={() => setCount(count + 1)}>Click to increment</button>
+      </div>
+    );
+  }
+}
+
 
 function Rules({ rule }) {
   return (
     <React.Fragment>
-      <TopLevel fail={rule === 'top-level'} />
+      <TopLevel fail={true} />
+      {/* <NoClasses /> */}
     </React.Fragment>
   );
 }
 
 export default function RulesDemo() {
-  return <Rules rule="top-level" />;
+  return <Rules />;
 }

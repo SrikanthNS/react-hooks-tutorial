@@ -13,7 +13,7 @@ import Responsive from './custom-hooks/responsive';
 import RulesOfHooks from './rules-of-hooks';
 import NotFound from './utils/404';
 
-// This is a quick 3 second router implementation. Don't copy it :)
+// This is a quick 3-second router implementation. Don't copy it :)
 
 const pathConfig = {
   '/': { component: Home, name: 'Home' },
